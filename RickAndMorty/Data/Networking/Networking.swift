@@ -103,7 +103,6 @@ extension Networking {
     func createUrlRequest() {
         let fullUrl = baseUrlString + pathString
 
-        print("~ Fullurl: \(fullUrl)")
         guard let url = URL(string: fullUrl) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue

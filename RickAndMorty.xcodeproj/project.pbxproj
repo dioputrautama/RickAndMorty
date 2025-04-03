@@ -42,6 +42,8 @@
 		16B20CDB2D9E22930090753E /* GetAllCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CDA2D9E228B0090753E /* GetAllCharacterUseCase.swift */; };
 		16B20CDF2D9E22D00090753E /* GetAllCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CDE2D9E22C90090753E /* GetAllCharacterRepository.swift */; };
 		16B20CE22D9E27870090753E /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE12D9E27820090753E /* CharacterEntity.swift */; };
+		16B20CE72D9E34960090753E /* DShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE62D9E34930090753E /* DShimmer.swift */; };
+		16B20CEA2D9E4FC50090753E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE92D9E4FB70090753E /* ImageDownloader.swift */; };
 		16C75A882CB90530004DDD5E /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75A872CB90530004DDD5E /* PuzzleView.swift */; };
 		16C75A8A2CB905A1004DDD5E /* PuzzleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75A892CB905A1004DDD5E /* PuzzleVM.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		16B20CDA2D9E228B0090753E /* GetAllCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharacterUseCase.swift; sourceTree = "<group>"; };
 		16B20CDE2D9E22C90090753E /* GetAllCharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharacterRepository.swift; sourceTree = "<group>"; };
 		16B20CE12D9E27820090753E /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
+		16B20CE62D9E34930090753E /* DShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DShimmer.swift; sourceTree = "<group>"; };
+		16B20CE92D9E4FB70090753E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		16C75A872CB90530004DDD5E /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		16C75A892CB905A1004DDD5E /* PuzzleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,6 +294,8 @@
 		16B20CC22D91BA950090753E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				16B20CE82D9E4FA20090753E /* Utils */,
+				16B20CE52D9E348D0090753E /* Components */,
 				16B20CC32D91BA990090753E /* Constants */,
 			);
 			path = Shared;
@@ -388,6 +394,22 @@
 				163B10DA2C6DE47500A17382 /* RickAndMortyApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		16B20CE52D9E348D0090753E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				16B20CE62D9E34930090753E /* DShimmer.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		16B20CE82D9E4FA20090753E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				16B20CE92D9E4FB70090753E /* ImageDownloader.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		16C75A852CB90517004DDD5E /* Games */ = {
@@ -489,6 +511,7 @@
 			files = (
 				169D95562C74F0D700E8D321 /* ExploreView.swift in Sources */,
 				16B20CE22D9E27870090753E /* CharacterEntity.swift in Sources */,
+				16B20CEA2D9E4FC50090753E /* ImageDownloader.swift in Sources */,
 				16B20CCE2D91BEE60090753E /* Constants.swift in Sources */,
 				163B10EC2C6DE7CC00A17382 /* HomeView.swift in Sources */,
 				163B11042C6DFA6A00A17382 /* Assets.swift in Sources */,
@@ -496,6 +519,7 @@
 				16592CBB2C748CE000CD50DF /* MainTabView.swift in Sources */,
 				1686A0472D8DD3D4000D7A08 /* HomeViewModel.swift in Sources */,
 				1644E6952C75E54900E234FB /* ExploreEntity.swift in Sources */,
+				16B20CE72D9E34960090753E /* DShimmer.swift in Sources */,
 				163B10DB2C6DE47500A17382 /* RickAndMortyApp.swift in Sources */,
 				169D95522C74A76C00E8D321 /* CharacterCardView.swift in Sources */,
 				1686A0532D8DDAC0000D7A08 /* AllCharacterDTO.swift in Sources */,

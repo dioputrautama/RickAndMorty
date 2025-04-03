@@ -22,7 +22,7 @@ final class HomeViewModel: HomeViewModelProtocol {
 
 extension HomeViewModel {
 
-    // MARK: GET ALL CHARACTERS
+    // MARK: REQUEST GET ALL CHARACTERS
     func getAllCharacter() {
         Task {
             do {
