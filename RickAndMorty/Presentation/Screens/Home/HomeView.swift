@@ -10,6 +10,11 @@ import SwiftUI
 struct HomeView: View {
     private let gridItems = [GridItem(.adaptive(minimum: 110))]
     @StateObject private var tabBarVisibility = TabBarVisibility.shared
+    @StateObject private var vm: HomeViewModel = HomeViewModel()
+
+    init(vm: HomeViewModel = HomeViewModel()) {
+        _vm = StateObject(wrappedValue: vm)
+    }
 
     var body: some View {
         ZStack {
@@ -17,8 +22,8 @@ struct HomeView: View {
                 .ignoresSafeArea()
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: gridItems, spacing: 16) {
-                    ForEach(0...20, id: \.self) { _ in
-                        CharacterCardView()
+                    ForEach(vm.characters) { character in
+                        CharacterCardView(character: character)
                     }
                 }
                 .padding(.all, 16)
@@ -33,6 +38,9 @@ struct HomeView: View {
                 }
             }
             .coordinateSpace(name: "scroll")
+        }
+        .onAppear() {
+            vm.getAllCharacter()
         }
     }
 }

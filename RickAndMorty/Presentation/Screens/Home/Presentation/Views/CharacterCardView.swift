@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CharacterCardView: View {
+    @State var character: CharacterEntity?
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Image(Assets.Image.dummy)
                 .cornerRadius(8)
 
-            Text("Rick Sanchez")
+            Text(character?.name ?? "")
                 .font(Typography.size14Bold)
                 .foregroundStyle(Colors.white)
 

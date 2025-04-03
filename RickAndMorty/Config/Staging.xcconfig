@@ -1,0 +1,9 @@
+//
+//  Staging.xcconfig
+//  RickAndMorty
+//
+//  Created by Dio Putra Utama on 24/03/25.
+//
+
+// MARK: SERVER URL
+BASE_URL = https:/$()/rickandmortyapi.com

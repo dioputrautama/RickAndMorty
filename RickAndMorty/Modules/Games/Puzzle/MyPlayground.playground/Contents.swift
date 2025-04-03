@@ -13,8 +13,8 @@ while true {
     print("Kerja...")
     counter += 1
 
-    if counter == 10 {
-        print("Istirahat Dulu Kawan, Billiard Dulu juga boleh")
+    if counter == 5 {
+        print("Sholat dulu kawan")
         break
     }
 

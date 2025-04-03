@@ -1,5 +1,5 @@
 //
-//  Color+Ext.swift
+//  Color+Extension.swift
 //  RickAndMorty
 //
 //  Created by Dio Putra Utama on 15/08/24.
