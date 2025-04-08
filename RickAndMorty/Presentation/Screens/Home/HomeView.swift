@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var tabBarVisibility = TabBarVisibility.shared
     @StateObject private var vm: HomeViewModel = HomeViewModel()
+    @EnvironmentObject var route: AppRouter
 
     init(vm: HomeViewModel = HomeViewModel()) {
         _vm = StateObject(wrappedValue: vm)
@@ -22,10 +23,12 @@ struct HomeView: View {
 
             switch vm.allCharacterState {
             case .idle, .loading:
-                Text("Loading")
+                CharacterLoadingView()
             case .success(let data, let loadMore):
                 HomeAllCharacterSection(characters: data, characterLoadingGetMore: loadMore) {
                     vm.getAllCharacter()
+                } onTapItem: { id in
+                    route.navigate(to: .puzzle)
                 }
             case .error(let message):
                 Text("Error: \(message)")

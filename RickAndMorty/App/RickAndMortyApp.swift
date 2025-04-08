@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct RickAndMortyApp: App {
+    @StateObject private var router = AppRouter()
+
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            NavigationStack(path: $router.path) {
+                HomeView()
+                    .navigationDestination(for: RoutePath.self) { route in
+                        switch route {
+                        case .home:
+                            HomeView()
+                        case .puzzle:
+                            PuzzleView()
+                        }
+                    }
+            }
+            .environmentObject(router) // ✅ penting
         }
     }
 }
+

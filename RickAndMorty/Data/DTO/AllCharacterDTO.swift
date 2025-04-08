@@ -54,7 +54,9 @@ extension CharacterResultDTO {
         return .init(
             id: id,
             name: name,
-            image: image ?? "")
+            image: image ?? "",
+            species: species ?? "",
+            placed: origin?.name ?? "")
     }
 }
 

@@ -46,6 +46,9 @@
 		16B20CEA2D9E4FC50090753E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE92D9E4FB70090753E /* ImageDownloader.swift */; };
 		16B20CEE2D9F88930090753E /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CED2D9F88900090753E /* HomeViewState.swift */; };
 		16B20CF02DA49BCC0090753E /* HomeAllCharacterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CEF2DA49BB60090753E /* HomeAllCharacterSection.swift */; };
+		16B20CF22DA4B8930090753E /* CharacterLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CF12DA4B88B0090753E /* CharacterLoadingView.swift */; };
+		16B20CF52DA4C0F70090753E /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CF42DA4C0F50090753E /* AppRouter.swift */; };
+		16B20CF72DA4C11C0090753E /* RoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CF62DA4C1110090753E /* RoutePath.swift */; };
 		16C75A882CB90530004DDD5E /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75A872CB90530004DDD5E /* PuzzleView.swift */; };
 		16C75A8A2CB905A1004DDD5E /* PuzzleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75A892CB905A1004DDD5E /* PuzzleVM.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +95,9 @@
 		16B20CE92D9E4FB70090753E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		16B20CED2D9F88900090753E /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
 		16B20CEF2DA49BB60090753E /* HomeAllCharacterSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAllCharacterSection.swift; sourceTree = "<group>"; };
+		16B20CF12DA4B88B0090753E /* CharacterLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLoadingView.swift; sourceTree = "<group>"; };
+		16B20CF42DA4C0F50090753E /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		16B20CF62DA4C1110090753E /* RoutePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePath.swift; sourceTree = "<group>"; };
 		16C75A872CB90530004DDD5E /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		16C75A892CB905A1004DDD5E /* PuzzleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,17 +206,9 @@
 				16B20CEB2D9F88700090753E /* Section */,
 				163B10EB2C6DE7CC00A17382 /* HomeView.swift */,
 				1686A0462D8DD3CE000D7A08 /* HomeViewModel.swift */,
-				1686A04A2D8DD67C000D7A08 /* Presentation */,
+				1686A04A2D8DD67C000D7A08 /* Components */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		163B11062C6DFF6600A17382 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				169D95512C74A76C00E8D321 /* CharacterCardView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		1644E6932C75E53300E234FB /* Data */ = {
@@ -241,12 +239,13 @@
 			path = MainTabView;
 			sourceTree = "<group>";
 		};
-		1686A04A2D8DD67C000D7A08 /* Presentation */ = {
+		1686A04A2D8DD67C000D7A08 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				163B11062C6DFF6600A17382 /* Views */,
+				16B20CF12DA4B88B0090753E /* CharacterLoadingView.swift */,
+				169D95512C74A76C00E8D321 /* CharacterCardView.swift */,
 			);
-			path = Presentation;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		1686A04D2D8DD8A7000D7A08 /* Features */ = {
@@ -397,6 +396,7 @@
 		16B20CE42D9E2E7E0090753E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				16B20CF32DA4C0F00090753E /* Router */,
 				163B10DA2C6DE47500A17382 /* RickAndMortyApp.swift */,
 			);
 			path = App;
@@ -432,6 +432,15 @@
 				16B20CED2D9F88900090753E /* HomeViewState.swift */,
 			);
 			path = ViewState;
+			sourceTree = "<group>";
+		};
+		16B20CF32DA4C0F00090753E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				16B20CF62DA4C1110090753E /* RoutePath.swift */,
+				16B20CF42DA4C0F50090753E /* AppRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		16C75A852CB90517004DDD5E /* Games */ = {
@@ -544,17 +553,20 @@
 				1686A0472D8DD3D4000D7A08 /* HomeViewModel.swift in Sources */,
 				1644E6952C75E54900E234FB /* ExploreEntity.swift in Sources */,
 				16B20CE72D9E34960090753E /* DShimmer.swift in Sources */,
+				16B20CF72DA4C11C0090753E /* RoutePath.swift in Sources */,
 				163B10DB2C6DE47500A17382 /* RickAndMortyApp.swift in Sources */,
 				169D95522C74A76C00E8D321 /* CharacterCardView.swift in Sources */,
 				1686A0532D8DDAC0000D7A08 /* AllCharacterDTO.swift in Sources */,
 				1686A04C2D8DD74A000D7A08 /* AllCharacterResponseEntity.swift in Sources */,
 				16B20CBF2D91B6500090753E /* HttpMethod.swift in Sources */,
+				16B20CF22DA4B8930090753E /* CharacterLoadingView.swift in Sources */,
 				16C75A8A2CB905A1004DDD5E /* PuzzleVM.swift in Sources */,
 				16B20CD22D91C0370090753E /* ApiPath.swift in Sources */,
 				16592CBD2C748EAB00CD50DF /* CustomTabBarView.swift in Sources */,
 				16B20CC12D91B6700090753E /* NetworkError.swift in Sources */,
 				16B20CDF2D9E22D00090753E /* GetAllCharacterRepository.swift in Sources */,
 				16C75A882CB90530004DDD5E /* PuzzleView.swift in Sources */,
+				16B20CF52DA4C0F70090753E /* AppRouter.swift in Sources */,
 				16A435F32CBCDFA900EAB6DF /* PuzzlePiece.swift in Sources */,
 				163B10F42C6DF5E400A17382 /* Typography.swift in Sources */,
 				16B20CD02D91BEF90090753E /* Constants+ApiConfig.swift in Sources */,

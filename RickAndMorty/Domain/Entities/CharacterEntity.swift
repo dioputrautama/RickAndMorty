@@ -9,4 +9,6 @@ struct CharacterEntity: Identifiable {
     let id: Int
     let name: String
     let image: String
+    let species: String
+    let placed: String
 }
