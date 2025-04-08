@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    private let gridItems = [GridItem(.adaptive(minimum: 110))]
     @StateObject private var tabBarVisibility = TabBarVisibility.shared
     @StateObject private var vm: HomeViewModel = HomeViewModel()
 
@@ -20,24 +19,17 @@ struct HomeView: View {
         ZStack {
             Colors.background
                 .ignoresSafeArea()
-            ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: gridItems, spacing: 16) {
-                    ForEach(vm.characters) { character in
-                        CharacterCardView(character: character)
-                    }
+
+            switch vm.allCharacterState {
+            case .idle, .loading:
+                Text("Loading")
+            case .success(let data, let loadMore):
+                HomeAllCharacterSection(characters: data, characterLoadingGetMore: loadMore) {
+                    vm.getAllCharacter()
                 }
-                .padding(.all, 16)
-                .background(GeometryReader {
-                    Color.clear.preference(key: ViewOffsetKey.self,
-                                           value: -$0.frame(in: .named("scroll")).origin.y)
-                })
-                .onPreferenceChange(ViewOffsetKey.self) { offset in
-                    withAnimation(.easeInOut(duration: 0.3)) {
-                        tabBarVisibility.isHideTabBar = offset > 150
-                    }
-                }
+            case .error(let message):
+                Text("Error: \(message)")
             }
-            .coordinateSpace(name: "scroll")
         }
         .onAppear() {
             vm.getAllCharacter()

@@ -39,8 +39,8 @@ extension View {
 
 
 public struct DShimmerView: View {
-    var width: CGFloat = 100
-    var height: CGFloat = 16
+//    var width: CGFloat = 100
+//    var height: CGFloat = 16
     var cornerRadius: CGFloat = 8
     var baseColor: Color = .gray.opacity(0.3)
     var shimmerColor: Color = .gray.opacity(0.6)
@@ -50,12 +50,12 @@ public struct DShimmerView: View {
     public var body: some View {
         RoundedRectangle(cornerRadius: cornerRadius)
             .fill(baseColor)
-            .frame(width: width, height: height)
+//            .frame(width: width, height: height)
             .overlay(
                 shimmerOverlay
                     .mask(
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .frame(width: width, height: height)
+//                            .frame(width: width, height: height)
                     )
             )
             .onAppear {
@@ -77,13 +77,13 @@ public struct DShimmerView: View {
 }
 
 extension DShimmerView {
-    @discardableResult
-    public func size(width: CGFloat, height: CGFloat) -> DShimmerView {
-        var copy = self
-        copy.width = width
-        copy.height = height
-        return copy
-    }
+//    @discardableResult
+//    public func size(width: CGFloat, height: CGFloat) -> DShimmerView {
+//        var copy = self
+//        copy.width = width
+//        copy.height = height
+//        return copy
+//    }
 
     @discardableResult
     public func cornerRadius(_ radius: CGFloat) -> DShimmerView {

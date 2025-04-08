@@ -26,6 +26,7 @@ internal class ImageDownloader {
             }
         } catch {
             print("Download error: \(error)")
+            return nil
         }
 
         return nil

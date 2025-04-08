@@ -44,6 +44,8 @@
 		16B20CE22D9E27870090753E /* CharacterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE12D9E27820090753E /* CharacterEntity.swift */; };
 		16B20CE72D9E34960090753E /* DShimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE62D9E34930090753E /* DShimmer.swift */; };
 		16B20CEA2D9E4FC50090753E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CE92D9E4FB70090753E /* ImageDownloader.swift */; };
+		16B20CEE2D9F88930090753E /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CED2D9F88900090753E /* HomeViewState.swift */; };
+		16B20CF02DA49BCC0090753E /* HomeAllCharacterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B20CEF2DA49BB60090753E /* HomeAllCharacterSection.swift */; };
 		16C75A882CB90530004DDD5E /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75A872CB90530004DDD5E /* PuzzleView.swift */; };
 		16C75A8A2CB905A1004DDD5E /* PuzzleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C75A892CB905A1004DDD5E /* PuzzleVM.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,8 @@
 		16B20CE12D9E27820090753E /* CharacterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntity.swift; sourceTree = "<group>"; };
 		16B20CE62D9E34930090753E /* DShimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DShimmer.swift; sourceTree = "<group>"; };
 		16B20CE92D9E4FB70090753E /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		16B20CED2D9F88900090753E /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
+		16B20CEF2DA49BB60090753E /* HomeAllCharacterSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAllCharacterSection.swift; sourceTree = "<group>"; };
 		16C75A872CB90530004DDD5E /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
 		16C75A892CB905A1004DDD5E /* PuzzleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +196,8 @@
 		163B11052C6DFF6000A17382 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				16B20CEC2D9F88790090753E /* ViewState */,
+				16B20CEB2D9F88700090753E /* Section */,
 				163B10EB2C6DE7CC00A17382 /* HomeView.swift */,
 				1686A0462D8DD3CE000D7A08 /* HomeViewModel.swift */,
 				1686A04A2D8DD67C000D7A08 /* Presentation */,
@@ -412,6 +418,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		16B20CEB2D9F88700090753E /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				16B20CEF2DA49BB60090753E /* HomeAllCharacterSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		16B20CEC2D9F88790090753E /* ViewState */ = {
+			isa = PBXGroup;
+			children = (
+				16B20CED2D9F88900090753E /* HomeViewState.swift */,
+			);
+			path = ViewState;
+			sourceTree = "<group>";
+		};
 		16C75A852CB90517004DDD5E /* Games */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +533,8 @@
 			files = (
 				169D95562C74F0D700E8D321 /* ExploreView.swift in Sources */,
 				16B20CE22D9E27870090753E /* CharacterEntity.swift in Sources */,
+				16B20CF02DA49BCC0090753E /* HomeAllCharacterSection.swift in Sources */,
+				16B20CEE2D9F88930090753E /* HomeViewState.swift in Sources */,
 				16B20CEA2D9E4FC50090753E /* ImageDownloader.swift in Sources */,
 				16B20CCE2D91BEE60090753E /* Constants.swift in Sources */,
 				163B10EC2C6DE7CC00A17382 /* HomeView.swift in Sources */,
